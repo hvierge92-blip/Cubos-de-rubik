@@ -52,7 +52,7 @@ export default function HomeView({ onNavigate, onAddToCart, onSelectProduct }: H
           style={{ borderRadius: "0px" }}
         >
           <img
-            src="/src/assets/images/cyber_dog_puzzle_1782733170159.jpg"
+            src="/cyber_dog_puzzle_1782733170159.jpg"
             alt="The Cyber-Dog"
             className="w-full aspect-square object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
             referrerPolicy="no-referrer"

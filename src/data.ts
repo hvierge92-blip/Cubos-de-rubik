@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
     longDescription: "Una obra maestra de ingeniería y arte digital. Este puzzle cinético autómata se desensambla en un intrincado juego de piezas cúbicas imantadas que activan patrones de luz reactivos mediante sensores táctiles integrados de alta sensibilidad. El diseño poligonal emula la biomecánica canina con una estética retro-futurista impecable.",
     price: 149.00,
     tag: "EDICIÓN LIMITADA",
-    image: "/src/assets/images/cyber_dog_puzzle_1782733170159.jpg",
+    image: "/cyber_dog_puzzle_1782733170159.jpg",
     specs: {
       "Material": "Polímero aeroespacial y duraluminio",
       "Conectividad": "Bluetooth 5.2 / USB-C",
@@ -48,7 +48,7 @@ export const PRODUCTS: Product[] = [
     longDescription: "El cubo insignia de competición de Crubik. Cuenta con un núcleo electromagnético ajustable que ofrece 64 niveles de fuerza de atracción magnética. Los paneles internos semitransparentes emiten una sutil luz de fondo neon configurable desde nuestra app, permitiendo resolver a ciegas o en entornos de baja visibilidad sin perder de vista los contrastes cromáticos.",
     price: 39.00,
     tag: "POPULAR",
-    image: "/src/assets/images/neon_cube_3x3_1782733191356.jpg",
+    image: "/neon_cube_3x3_1782733191356.jpg",
     specs: {
       "Material": "ABS de baja fricción esmerilado",
       "Magnetismo": "Núcleo ajustable MagLev (64 configuraciones)",
@@ -64,7 +64,7 @@ export const PRODUCTS: Product[] = [
     description: "Diseño esqueletizado para una ligereza extrema y agarre industrial.",
     longDescription: "Rompiendo los límites de la física de los cubos. El Void 4x4 elimina por completo el núcleo central sólido clásico, sustituyéndolo por un sistema de rieles de deslizamiento concéntrico con tolerancia de micras. Su estructura esqueletizada reduce el peso al mínimo histórico, mejorando el enfriamiento de las manos y proporcionando un agarre táctil de textura mecánica incomparable.",
     price: 55.00,
-    image: "/src/assets/images/void_cube_4x4_1782733206440.jpg",
+    image: "/void_cube_4x4_1782733206440.jpg",
     specs: {
       "Material": "Nylon reforzado con fibra de carbono",
       "Tecnología": "Deslizamiento concéntrico Void-Rail",
