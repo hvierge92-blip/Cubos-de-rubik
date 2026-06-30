@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-cyber-bg: #131314;
+  --color-cyber-surface: #1c1b1c;
+  --color-cyber-container: #201f20;
+  --color-cyber-container-high: #2a2a2b;
+  --color-cyber-cyan: #00f5ff;
+  --color-cyber-cyan-dim: #00dce5;
+  --color-cyber-cyan-dark: #003739;
+  --color-cyber-magenta: #ff24e4;
+  --color-cyber-magenta-dim: #fface8;
+  --color-cyber-magenta-dark: #5e0053;
+  --color-cyber-green: #3cff15;
+  --color-cyber-green-dim: #efffe4;
+}
+
+body {
+  background-color: var(--color-cyber-bg);
+  color: #e5e2e3;
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+

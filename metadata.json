@@ -1,0 +1,6 @@
+{
+  "name": "Crubik",
+  "description": "Portal de speed-cubing de precisión y catálogo de puzzles mecánicos futuristas de élite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
