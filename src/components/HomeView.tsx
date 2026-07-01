@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, ShoppingCart, MessageSquare, Terminal, Users, Cpu, ShieldAlert } from "lucide-react";
 import { PRODUCTS, Product } from "../data";
+import heroImage from "../assets/images/regenerated_image_1782892632945.png";
 
 interface HomeViewProps {
   onNavigate: (tab: string) => void;
@@ -45,21 +46,22 @@ export default function HomeView({ onNavigate, onAddToCart, onSelectProduct }: H
       {/* Hero Interactive Image Card */}
       <section className="max-w-xl mx-auto px-4">
         <motion.div 
-          className="relative border border-cyber-cyan/30 bg-black overflow-hidden group"
+          className="relative border border-cyber-cyan/30 bg-black overflow-hidden group cursor-pointer"
+          onClick={() => onNavigate("shop")}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           style={{ borderRadius: "0px" }}
         >
           <img
-            src="/cyber_dog_puzzle_1782733170159.jpg"
-            alt="The Cyber-Dog"
-            className="w-full aspect-square object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+            src={heroImage}
+            alt="Staffordshire 3x3"
+            className="w-full aspect-[3/4] object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
           <div className="absolute bottom-4 right-4 font-mono text-[10px] text-cyber-cyan bg-black/80 px-2 py-1 tracking-widest border border-cyber-cyan/20">
-            MODELO: C-DOG-2077
+            MODELO: STAFFORD-3X3
           </div>
         </motion.div>
       </section>

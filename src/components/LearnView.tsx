@@ -4,7 +4,7 @@ import { Search, Play, Pause, RotateCcw, ChevronRight, Sparkles, Trophy, HelpCir
 
 export default function LearnView() {
   const [activeCategory, setActiveCategory] = useState<string>("ALL");
-  const [searchQuery, setSearchQuery] = useState<string>("").trim();
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [filterDifficulty, setFilterDifficulty] = useState<string>("all");
   
   // Selected algorithm for practice
@@ -80,10 +80,11 @@ export default function LearnView() {
   // Filter algorithms
   const filteredAlgos = ALGORITHMS.filter((algo) => {
     const matchesCategory = activeCategory === "ALL" || algo.category === activeCategory;
+    const cleanQuery = searchQuery.trim().toLowerCase();
     const matchesSearch =
-      searchQuery === "" ||
-      algo.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      algo.notation.toLowerCase().includes(searchQuery.toLowerCase());
+      cleanQuery === "" ||
+      algo.name.toLowerCase().includes(cleanQuery) ||
+      algo.notation.toLowerCase().includes(cleanQuery);
     const matchesDifficulty =
       filterDifficulty === "all" || algo.difficulty.toLowerCase() === filterDifficulty.toLowerCase();
 

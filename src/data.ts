@@ -1,3 +1,8 @@
+import imgClassic from "./assets/images/regenerated_image_1782892638726.png";
+import imgCyberDog from "./assets/images/regenerated_image_1782892643847.png";
+import imgNeonGlow from "./assets/images/regenerated_image_1782892648336.png";
+import imgCarbon from "./assets/images/regenerated_image_1782892652659.png";
+
 export interface Product {
   id: string;
   name: string;
@@ -25,53 +30,71 @@ export interface Algorithm {
 
 export const PRODUCTS: Product[] = [
   {
-    id: "cyber-dog",
-    name: "The Cyber-Dog",
-    description: "Escultura cinética y puzzle de alta gama con sensores táctiles.",
-    longDescription: "Una obra maestra de ingeniería y arte digital. Este puzzle cinético autómata se desensambla en un intrincado juego de piezas cúbicas imantadas que activan patrones de luz reactivos mediante sensores táctiles integrados de alta sensibilidad. El diseño poligonal emula la biomecánica canina con una estética retro-futurista impecable.",
-    price: 149.00,
-    tag: "EDICIÓN LIMITADA",
-    image: "/cyber_dog_puzzle_1782733170159.jpg",
+    id: "staffordshire-3x3",
+    name: "Staffordshire Classic 3x3",
+    description: "Rompecabezas 3x3 de diseño exclusivo y tacto premium acabado mate.",
+    longDescription: "Un puzzle 3x3 único con la forma de un American Staffordshire. Su diseño rompe la forma clásica del cubo para ordenar el caos de su estructura escultórica. Con un acabado mate de tacto premium y alta resistencia, es ideal para coleccionistas y amantes del diseño disruptivo. ¿Aceptas el desafío?",
+    price: 29.99,
+    tag: "DISEÑO EXCLUSIVO",
+    image: imgClassic,
     specs: {
-      "Material": "Polímero aeroespacial y duraluminio",
-      "Conectividad": "Bluetooth 5.2 / USB-C",
-      "Iluminación": "LED RGB direccionable inteligente",
-      "Batería": "Li-Po 1200 mAh (hasta 8 horas de brillo reactivo)",
-      "Sensores": "8 zonas capacitivas de precisión",
-      "Dificultad": "Extrema (9.5/10)"
+      "Modelo": "American Staffordshire Classic",
+      "Tipo": "Puzzle 3x3 Escultórico",
+      "Tacto": "Premium Acabado Mate",
+      "Estructura": "Resistente y duradera",
+      "Dificultad": "Alta (8/10)",
+      "Envío": "Gratuito"
+    }
+  },
+  {
+    id: "cyber-dog",
+    name: "Staffordshire Cyber-Dog",
+    description: "Edición limitada cyber-tech con iluminación reactiva por inducción.",
+    longDescription: "Una obra maestra de ingeniería cibernética. El Staffordshire Cyber-Dog cuenta con sutiles detalles cromados y líneas de corte retro-futuristas que se iluminan al interactuar con las piezas mecánicas del puzzle. Tacto premium con aleación de nylon reforzado para giros ultra veloces y estables.",
+    price: 29.99,
+    tag: "EDICIÓN LIMITADA",
+    image: imgCyberDog,
+    specs: {
+      "Modelo": "Staffordshire Cybernetic V1",
+      "Material": "Nylon reforzado y polímero",
+      "Iluminación": "Detalles reactivos cyber-glow",
+      "Tacto": "Suave y de alta fricción",
+      "Dificultad": "Extrema (9/10)",
+      "Envío": "Gratuito"
     }
   },
   {
     id: "neon-3x3",
-    name: "Neon 3x3",
-    description: "Rotación magnética ultra-suave con retroiluminación interna.",
-    longDescription: "El cubo insignia de competición de Crubik. Cuenta con un núcleo electromagnético ajustable que ofrece 64 niveles de fuerza de atracción magnética. Los paneles internos semitransparentes emiten una sutil luz de fondo neon configurable desde nuestra app, permitiendo resolver a ciegas o en entornos de baja visibilidad sin perder de vista los contrastes cromáticos.",
-    price: 39.00,
+    name: "Staffordshire Neon Glow",
+    description: "Diseño retro-iluminado con colores vibrantes rosa y cian de alta intensidad.",
+    longDescription: "El Staffordshire Neon Glow de Crubik está diseñado para deslumbrar. Las juntas de los bloques emiten una vibrante y constante luz electroluminiscente rosa y cian que facilita la resolución en condiciones de baja luz, a la vez que resalta las líneas escultóricas del imponente Staffy.",
+    price: 29.99,
     tag: "POPULAR",
-    image: "/neon_cube_3x3_1782733191356.jpg",
+    image: imgNeonGlow,
     specs: {
-      "Material": "ABS de baja fricción esmerilado",
-      "Magnetismo": "Núcleo ajustable MagLev (64 configuraciones)",
-      "Retroiluminación": "Neon Glow de espectro completo",
-      "Peso": "68 gramos",
-      "Dimensiones": "56mm x 56mm x 56mm",
-      "Dificultad": "Estándar (6/10)"
+      "Modelo": "Staffordshire Neon Lumines",
+      "Material": "ABS de baja fricción pulido",
+      "Luz": "Electroluminiscente Rosa & Cian",
+      "Tacto": "Texturizado Antideslizante",
+      "Dificultad": "Estándar (7/10)",
+      "Envío": "Gratuito"
     }
   },
   {
     id: "void-4x4",
-    name: "Void 4x4",
-    description: "Diseño esqueletizado para una ligereza extrema y agarre industrial.",
-    longDescription: "Rompiendo los límites de la física de los cubos. El Void 4x4 elimina por completo el núcleo central sólido clásico, sustituyéndolo por un sistema de rieles de deslizamiento concéntrico con tolerancia de micras. Su estructura esqueletizada reduce el peso al mínimo histórico, mejorando el enfriamiento de las manos y proporcionando un agarre táctil de textura mecánica incomparable.",
-    price: 55.00,
-    image: "/void_cube_4x4_1782733206440.jpg",
+    name: "Staffordshire Carbon Edition",
+    description: "Fibra de carbono mate ultra ligera y detalles metálicos pulidos.",
+    longDescription: "Para los coleccionistas más exigentes. La Staffordshire Carbon Edition sustituye los plásticos tradicionales por un compuesto de fibra de carbono mate de alta resistencia. Cuenta con un pulido mecánico de precisión que permite que cada pieza se desplace con el mínimo rozamiento táctil.",
+    price: 29.99,
+    tag: "EDICIÓN DE LUJO",
+    image: imgCarbon,
     specs: {
-      "Material": "Nylon reforzado con fibra de carbono",
-      "Tecnología": "Deslizamiento concéntrico Void-Rail",
-      "Peso": "74 gramos",
-      "Dimensiones": "60mm x 60mm x 60mm",
-      "Estructura": "Esqueletizada tipo bento",
-      "Dificultad": "Avanzada (8/10)"
+      "Modelo": "Staffordshire Carbon Matte",
+      "Material": "Compuesto de Fibra de Carbono",
+      "Tecnología": "Núcleo de giro magnético",
+      "Tacto": "Mate texturado ultra-premium",
+      "Dificultad": "Avanzada (8/10)",
+      "Envío": "Gratuito"
     }
   }
 ];
