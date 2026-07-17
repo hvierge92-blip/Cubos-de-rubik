@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { Menu, ShoppingCart, HelpCircle, Home, LayoutGrid, GraduationCap, User, MessageSquare } from "lucide-react";
+import { Menu, ShoppingCart, HelpCircle, Home, LayoutGrid, GraduationCap, User, MessageSquare, Heart, Sparkles } from "lucide-react";
 import HomeView from "./components/HomeView";
+import CatalogView from "./components/CatalogView";
 import ShopView from "./components/ShopView";
 import LearnView from "./components/LearnView";
 import ProfileView from "./components/ProfileView";
+import SolidarityView from "./components/SolidarityView";
 import CartDrawer from "./components/CartDrawer";
 import AiChatAssistant from "./components/AiChatAssistant";
 import { Product } from "./data";
@@ -117,6 +119,11 @@ export default function App() {
             onSelectProduct={handleSelectProduct} 
           />
         )}
+        {activeTab === "catalogo" && (
+          <CatalogView 
+            onAddToCart={handleAddToCart} 
+          />
+        )}
         {activeTab === "shop" && (
           <ShopView 
             onAddToCart={handleAddToCart} 
@@ -126,6 +133,9 @@ export default function App() {
         )}
         {activeTab === "learn" && (
           <LearnView />
+        )}
+        {activeTab === "solidarity" && (
+          <SolidarityView />
         )}
         {activeTab === "profile" && (
           <ProfileView />
@@ -146,12 +156,22 @@ export default function App() {
       <nav className="fixed bottom-0 left-0 right-0 z-40 bg-black border-t border-gray-900 py-3.5 px-6 flex justify-around items-center">
         <button
           onClick={() => setActiveTab("home")}
-          className={`flex flex-col items-center gap-1 transition-all ${
-            activeTab === "home" ? "text-cyber-cyan scale-105 font-bold" : "text-gray-500 hover:text-gray-300"
+          className={`group flex flex-col items-center gap-1 transition-all ${
+            activeTab === "home" ? "scale-110 opacity-100 font-extrabold" : "opacity-75 hover:opacity-100"
           }`}
         >
-          <Home className="w-5 h-5" />
-          <span className="font-mono text-[9px] tracking-widest uppercase">HOME</span>
+          <Home className="w-5 h-5 text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,245,255,0.95)]" />
+          <span className="font-mono text-[9px] tracking-widest uppercase text-cyber-cyan drop-shadow-[0_0_4px_rgba(0,245,255,0.5)]">HOME</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab("catalogo")}
+          className={`group flex flex-col items-center gap-1 transition-all ${
+            activeTab === "catalogo" ? "scale-110 opacity-100 font-extrabold" : "opacity-75 hover:opacity-100"
+          }`}
+        >
+          <Sparkles className="w-5 h-5 text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,245,255,0.95)]" />
+          <span className="font-mono text-[9px] tracking-widest uppercase text-cyber-cyan drop-shadow-[0_0_4px_rgba(0,245,255,0.5)]">CATÁLOGO</span>
         </button>
 
         <button
@@ -159,32 +179,42 @@ export default function App() {
             setSelectedProduct(null);
             setActiveTab("shop");
           }}
-          className={`flex flex-col items-center gap-1 transition-all ${
-            activeTab === "shop" ? "text-cyber-cyan scale-105 font-bold" : "text-gray-500 hover:text-gray-300"
+          className={`group flex flex-col items-center gap-1 transition-all ${
+            activeTab === "shop" ? "scale-110 opacity-100 font-extrabold" : "opacity-75 hover:opacity-100"
           }`}
         >
-          <LayoutGrid className="w-5 h-5" />
-          <span className="font-mono text-[9px] tracking-widest uppercase">SHOP</span>
+          <LayoutGrid className="w-5 h-5 text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,245,255,0.95)]" />
+          <span className="font-mono text-[9px] tracking-widest uppercase text-cyber-cyan drop-shadow-[0_0_4px_rgba(0,245,255,0.5)]">SHOP</span>
         </button>
 
         <button
           onClick={() => setActiveTab("learn")}
-          className={`flex flex-col items-center gap-1 transition-all ${
-            activeTab === "learn" ? "text-cyber-cyan scale-105 font-bold" : "text-gray-500 hover:text-gray-300"
+          className={`group flex flex-col items-center gap-1 transition-all ${
+            activeTab === "learn" ? "scale-110 opacity-100 font-extrabold" : "opacity-75 hover:opacity-100"
           }`}
         >
-          <GraduationCap className="w-5 h-5" />
-          <span className="font-mono text-[9px] tracking-widest uppercase">LEARN</span>
+          <GraduationCap className="w-5 h-5 text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,245,255,0.95)]" />
+          <span className="font-mono text-[9px] tracking-widest uppercase text-cyber-cyan drop-shadow-[0_0_4px_rgba(0,245,255,0.5)]">LEARN</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab("solidarity")}
+          className={`group flex flex-col items-center gap-1 transition-all ${
+            activeTab === "solidarity" ? "scale-110 opacity-100 font-extrabold animate-pulse" : "opacity-75 hover:opacity-100 animate-pulse"
+          }`}
+        >
+          <Heart className="w-5 h-5 text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,245,255,0.95)]" />
+          <span className="font-mono text-[9px] tracking-widest uppercase text-cyber-cyan drop-shadow-[0_0_4px_rgba(0,245,255,0.5)]">SOLIDARIO</span>
         </button>
 
         <button
           onClick={() => setActiveTab("profile")}
-          className={`flex flex-col items-center gap-1 transition-all ${
-            activeTab === "profile" ? "text-cyber-cyan scale-105 font-bold" : "text-gray-500 hover:text-gray-300"
+          className={`group flex flex-col items-center gap-1 transition-all ${
+            activeTab === "profile" ? "scale-110 opacity-100 font-extrabold" : "opacity-75 hover:opacity-100"
           }`}
         >
-          <User className="w-5 h-5" />
-          <span className="font-mono text-[9px] tracking-widest uppercase">PROFILE</span>
+          <User className="w-5 h-5 text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,245,255,0.95)]" />
+          <span className="font-mono text-[9px] tracking-widest uppercase text-cyber-cyan drop-shadow-[0_0_4px_rgba(0,245,255,0.5)]">PROFILE</span>
         </button>
       </nav>
 

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ALGORITHMS, Algorithm } from "../data";
-import { Search, Play, Pause, RotateCcw, ChevronRight, Sparkles, Trophy, HelpCircle, Check, Flame } from "lucide-react";
+import { Search, Play, Pause, RotateCcw, ChevronRight, Sparkles, Trophy, HelpCircle, Check, Flame, Brain } from "lucide-react";
 
 export default function LearnView() {
   const [activeCategory, setActiveCategory] = useState<string>("ALL");
@@ -392,6 +392,77 @@ export default function LearnView() {
           </div>
         </div>
       </div>
+
+      {/* Beneficios para tu mente y salud */}
+      <section className="border border-cyber-green/30 bg-neutral-950 p-6 space-y-6 relative overflow-hidden mt-8">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-cyber-green/5 rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="flex items-center gap-3 border-b border-gray-900 pb-4">
+          <div className="p-2.5 bg-cyber-green/10 text-cyber-green border border-cyber-green/20">
+            <Brain className="w-6 h-6 text-cyber-green animate-pulse" />
+          </div>
+          <div>
+            <span className="font-mono text-[10px] tracking-widest text-cyber-green uppercase block">
+              BENEFICIOS MENTALES & SALUD
+            </span>
+            <h3 className="font-display text-xl font-extrabold text-white uppercase tracking-tight">
+              Beneficios para tu mente y salud
+            </h3>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-[#0b0b0c] p-4 border border-gray-900 hover:border-cyber-cyan/30 transition-all flex gap-3 items-start">
+            <span className="font-mono text-xs text-cyber-cyan bg-cyber-cyan/10 border border-cyber-cyan/20 px-2 py-0.5 mt-0.5 font-bold">01</span>
+            <div>
+              <h4 className="font-display text-sm font-bold text-white uppercase tracking-wide">Memoria</h4>
+              <p className="font-sans text-xs text-gray-400 mt-1 leading-relaxed">
+                Potencia la retención espacial y la memoria muscular mediante el aprendizaje y ejecución fluida de secuencias complejas.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[#0b0b0c] p-4 border border-gray-900 hover:border-cyber-magenta/30 transition-all flex gap-3 items-start">
+            <span className="font-mono text-xs text-cyber-magenta bg-cyber-magenta/10 border border-cyber-magenta/20 px-2 py-0.5 mt-0.5 font-bold">02</span>
+            <div>
+              <h4 className="font-display text-sm font-bold text-white uppercase tracking-wide">Atención y Concentración</h4>
+              <p className="font-sans text-xs text-gray-400 mt-1 leading-relaxed">
+                Entrena el enfoque absoluto y el estado de flujo (flow state), filtrando las distracciones del entorno para un rendimiento pico.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[#0b0b0c] p-4 border border-gray-900 hover:border-cyber-green/30 transition-all flex gap-3 items-start">
+            <span className="font-mono text-xs text-cyber-green bg-cyber-green/10 border border-cyber-green/20 px-2 py-0.5 mt-0.5 font-bold">03</span>
+            <div>
+              <h4 className="font-display text-sm font-bold text-white uppercase tracking-wide">Coordinación Mano-Ojo y Motricidad Fina</h4>
+              <p className="font-sans text-xs text-gray-400 mt-1 leading-relaxed">
+                Aumenta la destreza neuromuscular y la velocidad de reacción mediante giros rápidos y precisos a nivel de micras.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[#0b0b0c] p-4 border border-gray-900 hover:border-cyber-cyan/30 transition-all flex gap-3 items-start">
+            <span className="font-mono text-xs text-cyber-cyan bg-cyber-cyan/10 border border-cyber-cyan/20 px-2 py-0.5 mt-0.5 font-bold">04</span>
+            <div>
+              <h4 className="font-display text-sm font-bold text-white uppercase tracking-wide">Resolución de Problemas y Pensamiento Lógico</h4>
+              <p className="font-sans text-xs text-gray-400 mt-1 leading-relaxed">
+                Desarrolla habilidades cognitivas de análisis táctico, reconocimiento de patrones tridimensionales y algoritmos de resolución.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[#0b0b0c] p-4 border border-gray-900 hover:border-cyber-magenta/30 transition-all flex gap-3 items-start md:col-span-2">
+            <span className="font-mono text-xs text-cyber-magenta bg-cyber-magenta/10 border border-cyber-magenta/20 px-2 py-0.5 mt-0.5 font-bold">05</span>
+            <div>
+              <h4 className="font-display text-sm font-bold text-white uppercase tracking-wide">Salud Cognitiva a Largo Plazo</h4>
+              <p className="font-sans text-xs text-gray-400 mt-1 leading-relaxed">
+                Mantiene el cerebro joven y plástico, ejercitando múltiples áreas cerebrales simultáneamente como un escudo contra el envejecimiento mental.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

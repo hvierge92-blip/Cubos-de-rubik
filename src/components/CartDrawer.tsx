@@ -130,7 +130,10 @@ export default function CartDrawer({
                       style={{ borderRadius: "0px" }}
                     >
                       {/* Image */}
-                      <div className="w-16 h-16 bg-black border border-gray-950 flex-shrink-0 overflow-hidden">
+                      <div 
+                        className="w-16 h-16 border border-gray-950 flex-shrink-0 overflow-hidden"
+                        style={{ background: "radial-gradient(circle at 20% 30%, rgba(255, 0, 128, 0.45) 0%, rgba(255, 0, 128, 0.08) 50%, transparent 80%), radial-gradient(circle at 80% 70%, rgba(0, 240, 255, 0.42) 0%, rgba(0, 240, 255, 0.08) 50%, transparent 80%), radial-gradient(circle at 50% 50%, rgba(120, 50, 255, 0.15) 0%, transparent 70%), #0d0a16" }}
+                      >
                         <img
                           src={item.product.image}
                           alt={item.product.name}

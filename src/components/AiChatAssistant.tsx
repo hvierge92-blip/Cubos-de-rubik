@@ -15,7 +15,7 @@ export default function AiChatAssistant({ isOpen, onClose }: AiChatAssistantProp
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "model",
-      content: "⚙️ ¡Conexión establecida con CRUBIK AI GUIDE! Soy tu sistema inteligente de soporte táctico y entrenamiento biomecánico. ¿Tienes preguntas sobre el algoritmo CFOP o deseas calibrar la tensión MagLev de tu cubo Neon 3x3? Indícame tu consulta."
+      content: "🤖 ¡Conexión establecida con tu Consultor Estratégico CRUBIK AI! Estoy aquí para guiarte en el diseño web, posicionamiento SEO local en Vitoria-Gasteiz, y la campaña solidaria con la protectora Indartxu. ¿En qué paso de nuestra estrategia te gustaría profundizar?"
     }
   ]);
   const [input, setInput] = useState("");
@@ -24,10 +24,10 @@ export default function AiChatAssistant({ isOpen, onClose }: AiChatAssistantProp
 
   // Suggestions for quick entry
   const SUGGESTIONS = [
-    "Explícame el método CFOP",
-    "¿Qué tecnología tiene el Neon 3x3?",
-    "¿Cómo resuelvo el Cyber-Dog?",
-    "Algoritmo rápido para PLL"
+    "Estrategia SEO local en Vitoria",
+    "Campaña Solidaria con Indartxu",
+    "Optimizar palabras clave Álava",
+    "Ideas de anuncios de impacto"
   ];
 
   const scrollToBottom = () => {
